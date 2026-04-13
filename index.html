@@ -3,155 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avalanche Waste Management Calgary | Bin Rentals, Portable Toilets & More</title>
-  <meta name="description" content="Calgary's trusted bin rental, portable toilet, and temporary fencing provider. No hidden fees. Award-winning service. Call 403-461-1677 or book online." />
-
-  <!-- Favicon -->
+  <title>Avalanche Waste Management Calgary | Bin Rentals, Portable Toilets &amp; Temporary Fencing</title>
+  <meta name="description" content="Calgary's award-winning bin rental, portable toilet, and temporary fencing company. No hidden fees. 24-hr delivery. Call 403-461-1677 or book online." />
   <link rel="icon" type="image/png" href="assets/logo.png" />
-
-  <!-- Social / OG -->
+  <link rel="stylesheet" href="assets/style.css" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jarvis-vobiuslabs.github.io/avalanchewm-redesign/" />
   <meta property="og:title" content="Avalanche Waste Management Calgary" />
   <meta property="og:description" content="Calgary's award-winning bin rental, portable toilet, and temporary fencing provider. No hidden fees. Call 403-461-1677." />
   <meta property="og:image" content="assets/service-bins.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-
   <style>
-    /* ─── Reset & Base ─────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --green:   #056839;
-      --green2:  #229c56;
-      --dark:    #16182b;
-      --gray:    #4a4d60;
-      --light:   #f5f7f5;
-      --white:   #ffffff;
-      --radius:  8px;
-      --shadow:  0 4px 24px rgba(0,0,0,.10);
-      --trans:   .2s ease;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      color: var(--dark);
-      background: var(--white);
-      line-height: 1.6;
-    }
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      border-radius: var(--radius);
-      font-weight: 700;
-      font-size: 1rem;
-      transition: opacity var(--trans), transform var(--trans);
-      cursor: pointer;
-    }
-    .btn:hover { opacity: .88; transform: translateY(-1px); }
-    .btn-primary { background: var(--green); color: var(--white); }
-    .btn-secondary { background: var(--white); color: var(--green); border: 2px solid var(--green); }
-    .btn-white { background: var(--white); color: var(--green); }
-    .section-label {
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--green2);
-      margin-bottom: 8px;
-    }
-    h2.section-title {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 800;
-      line-height: 1.2;
-      color: var(--dark);
-    }
-    .section-desc {
-      color: var(--gray);
-      max-width: 600px;
-      margin-top: 12px;
-    }
-
-    /* ─── Nav ──────────────────────────────────────────── */
-    .topbar {
-      background: var(--green);
-      color: var(--white);
-      font-size: .85rem;
-      padding: 8px 0;
-      text-align: center;
-    }
-    .topbar a { color: var(--white); font-weight: 600; }
-    nav {
-      background: var(--white);
-      box-shadow: 0 2px 12px rgba(0,0,0,.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 20px;
-      max-width: 1160px;
-      margin: 0 auto;
-    }
-    .nav-logo img { height: 52px; width: auto; }
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: .9rem;
-      font-weight: 600;
-      color: var(--dark);
-      transition: color var(--trans);
-    }
-    .nav-links a:hover { color: var(--green); }
-    .nav-cta { display: flex; gap: 12px; align-items: center; }
-    .nav-phone { font-weight: 700; color: var(--green); font-size: 1rem; }
-    /* mobile nav */
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { width: 24px; height: 2px; background: var(--dark); display: block; transition: var(--trans); }
-    #nav-toggle { display: none; }
-    @media (max-width: 860px) {
-      .nav-links, .nav-cta .btn { display: none; }
-      .hamburger { display: flex; }
-      #nav-toggle:checked ~ .nav-links {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        padding: 20px;
-        box-shadow: 0 8px 24px rgba(0,0,0,.1);
-        gap: 16px;
-      }
-    }
-
-    /* ─── Hero ─────────────────────────────────────────── */
-    .hero {
+    /* ── Home hero ────────────────────────────────────── */
+    .home-hero {
       background: linear-gradient(135deg, #023d21 0%, #056839 60%, #0a9448 100%);
-      color: var(--white);
-      padding: 80px 20px 60px;
+      color: #fff;
+      padding: 80px 0 64px;
       position: relative;
       overflow: hidden;
     }
-    .hero::before {
-      content: '';
+    .home-hero::before {
+      content:'';
       position: absolute;
       inset: 0;
-      background: url('assets/hero-bg.png') center/cover no-repeat;
-      opacity: .12;
+      background: url('assets/hero-bg.png') center/cover;
+      opacity: .1;
     }
-    .hero-inner {
-      max-width: 1160px;
-      margin: 0 auto;
+    .home-hero-inner {
       position: relative;
       z-index: 1;
       display: grid;
@@ -161,872 +39,378 @@
     }
     .hero-badge {
       display: inline-flex;
+      gap: 6px;
       align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,.15);
+      background: rgba(255,255,255,.14);
       border: 1px solid rgba(255,255,255,.3);
       border-radius: 100px;
-      padding: 6px 16px;
-      font-size: .8rem;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-    .hero h1 span { color: #8be5b0; }
-    .hero p {
-      font-size: 1.1rem;
-      opacity: .9;
-      margin-bottom: 32px;
-      max-width: 480px;
-    }
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-    .hero-img-wrap {
-      position: relative;
-    }
-    .hero-img-wrap img {
-      border-radius: 16px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.3);
-      width: 100%;
-      object-fit: cover;
-      max-height: 420px;
-    }
-    .hero-trust {
-      display: flex;
-      gap: 24px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-    }
-    .hero-trust-item { display: flex; align-items: center; gap: 8px; font-size: .85rem; opacity: .9; }
-    .hero-trust-item::before { content: '✓'; font-weight: 800; color: #8be5b0; }
-    @media (max-width: 768px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-img-wrap { display: none; }
-    }
-
-    /* ─── Stats bar ─────────────────────────────────────── */
-    .stats-bar {
-      background: var(--dark);
-      color: var(--white);
-      padding: 28px 0;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      text-align: center;
-    }
-    .stat-num { font-size: 1.8rem; font-weight: 900; color: #8be5b0; }
-    .stat-label { font-size: .8rem; opacity: .75; margin-top: 4px; }
-    @media (max-width: 640px) {
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    /* ─── Services ─────────────────────────────────────── */
-    .services { padding: 80px 0; background: var(--white); }
-    .services-header { text-align: center; margin-bottom: 52px; }
-    .services-header .section-desc { margin: 12px auto 0; }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-    .service-card {
-      background: var(--white);
-      border: 1px solid #e5e9e7;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform var(--trans), box-shadow var(--trans);
-    }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.14); }
-    .service-card img { width: 100%; height: 220px; object-fit: cover; }
-    .service-card-body { padding: 24px; }
-    .service-card-body h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 10px; }
-    .service-card-body p { font-size: .9rem; color: var(--gray); margin-bottom: 18px; }
-    .service-card-body .btn { font-size: .85rem; padding: 10px 22px; }
-    @media (max-width: 800px) {
-      .services-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-    }
-
-    /* ─── Why Choose Us ─────────────────────────────────── */
-    .why {
-      background: var(--light);
-      padding: 80px 0;
-    }
-    .why-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-    .why-img img {
-      border-radius: 16px;
-      width: 100%;
-      object-fit: cover;
-      box-shadow: var(--shadow);
-    }
-    .why-features { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
-    .why-feature {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-    .why-feature-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: var(--green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .why-feature-icon img { width: 28px; height: 28px; object-fit: contain; filter: brightness(10); }
-    .why-feature-text h4 { font-weight: 700; margin-bottom: 4px; }
-    .why-feature-text p { font-size: .9rem; color: var(--gray); }
-    @media (max-width: 768px) {
-      .why-inner { grid-template-columns: 1fr; }
-      .why-img { display: none; }
-    }
-
-    /* ─── Bin Pricing ───────────────────────────────────── */
-    .pricing { padding: 80px 0; background: var(--white); }
-    .pricing-header { text-align: center; margin-bottom: 52px; }
-    .pricing-header .section-desc { margin: 12px auto 0; }
-    .pricing-tabs {
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 36px;
-      flex-wrap: wrap;
-    }
-    .tab-btn {
-      padding: 10px 24px;
-      border-radius: 100px;
-      font-size: .9rem;
-      font-weight: 600;
-      border: 2px solid var(--green);
-      background: transparent;
-      color: var(--green);
-      cursor: pointer;
-      transition: background var(--trans), color var(--trans);
-    }
-    .tab-btn.active, .tab-btn:hover { background: var(--green); color: var(--white); }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-    .pricing-card {
-      border: 2px solid #e5e9e7;
-      border-radius: 16px;
-      padding: 28px;
-      position: relative;
-      transition: border-color var(--trans), box-shadow var(--trans);
-    }
-    .pricing-card:hover { border-color: var(--green2); box-shadow: var(--shadow); }
-    .pricing-card.featured { border-color: var(--green); }
-    .pricing-badge {
-      position: absolute;
-      top: -13px;
-      left: 24px;
-      background: var(--green);
-      color: var(--white);
-      font-size: .72rem;
+      padding: 5px 14px;
+      font-size: .77rem;
       font-weight: 700;
       letter-spacing: .08em;
       text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 100px;
+      margin-bottom: 18px;
     }
-    .pricing-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 18px; }
-    .pricing-card h3 { font-size: 1.3rem; font-weight: 800; }
-    .pricing-card .price { font-size: 2rem; font-weight: 900; color: var(--green); margin: 8px 0; }
-    .pricing-card .price small { font-size: .9rem; color: var(--gray); font-weight: 400; }
-    .pricing-specs { list-style: none; margin: 14px 0 20px; display: flex; flex-direction: column; gap: 8px; }
-    .pricing-specs li { font-size: .88rem; color: var(--gray); display: flex; gap: 8px; align-items: flex-start; }
-    .pricing-specs li::before { content: '✓'; color: var(--green2); font-weight: 800; flex-shrink: 0; }
-    .pricing-card .btn { width: 100%; text-align: center; }
-    @media (max-width: 680px) {
-      .pricing-grid { grid-template-columns: 1fr; }
-    }
-    .pricing-note {
-      text-align: center;
-      margin-top: 28px;
-      font-size: .88rem;
-      color: var(--gray);
-      background: var(--light);
-      padding: 16px 20px;
-      border-radius: var(--radius);
-    }
-
-    /* ─── Awards ────────────────────────────────────────── */
-    .awards { background: var(--green); color: var(--white); padding: 60px 0; text-align: center; }
-    .awards h2 { font-size: clamp(1.4rem, 3.5vw, 2rem); font-weight: 800; margin-bottom: 8px; }
-    .awards p { opacity: .85; margin-bottom: 40px; }
-    .awards-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .award-item img {
-      height: 120px;
-      width: auto;
-      object-fit: contain;
-      filter: brightness(0) invert(1);
-      opacity: .9;
-      transition: opacity var(--trans), transform var(--trans);
-    }
-    .award-item img:hover { opacity: 1; transform: scale(1.04); }
-    .award-bbb img { filter: none; opacity: 1; height: 80px; }
-
-    /* ─── Testimonials ──────────────────────────────────── */
-    .testimonials { padding: 80px 0; background: var(--light); }
-    .testimonials-header { text-align: center; margin-bottom: 48px; }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .testimonial-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      position: relative;
-    }
-    .testimonial-card::before {
-      content: '"';
-      position: absolute;
-      top: 16px;
-      left: 24px;
-      font-size: 4rem;
-      color: var(--green2);
-      opacity: .25;
-      font-family: Georgia, serif;
-      line-height: 1;
-    }
-    .testimonial-stars { color: #f5a623; font-size: 1rem; margin-bottom: 14px; }
-    .testimonial-text { font-size: .93rem; color: var(--gray); line-height: 1.7; margin-bottom: 20px; }
-    .testimonial-author { font-weight: 700; font-size: .9rem; }
-    .testimonial-company { font-size: .82rem; color: var(--gray); }
-    @media (max-width: 800px) {
-      .testimonials-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-    }
-
-    /* ─── About / Owner ─────────────────────────────────── */
-    .about { padding: 80px 0; background: var(--white); }
-    .about-inner {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 60px;
-      align-items: center;
-    }
-    .about-photo img {
-      border-radius: 16px;
-      width: 100%;
-      object-fit: cover;
-      box-shadow: var(--shadow);
-      max-height: 380px;
-    }
-    .about-content .section-label { display: block; }
-    .about-content h2 { margin-bottom: 16px; }
-    .about-content p { color: var(--gray); margin-bottom: 14px; font-size: .96rem; }
-    @media (max-width: 720px) {
-      .about-inner { grid-template-columns: 1fr; }
-    }
-
-    /* ─── CTA Banner ────────────────────────────────────── */
-    .cta-banner {
-      background: linear-gradient(135deg, #023d21 0%, #056839 100%);
-      color: var(--white);
-      padding: 72px 20px;
-      text-align: center;
-    }
-    .cta-banner h2 {
-      font-size: clamp(1.6rem, 4vw, 2.6rem);
-      font-weight: 900;
-      margin-bottom: 14px;
-    }
-    .cta-banner p { opacity: .85; margin-bottom: 36px; font-size: 1.05rem; }
-    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .cta-banner .btn-white { border: 2px solid var(--white); }
-
-    /* ─── Contact ───────────────────────────────────────── */
-    .contact { padding: 80px 0; background: var(--light); }
-    .contact-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-    }
-    .contact-info h2 { margin-bottom: 12px; }
-    .contact-info p { color: var(--gray); margin-bottom: 28px; }
-    .contact-detail {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      margin-bottom: 20px;
-    }
-    .contact-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: var(--green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 1.1rem;
-    }
-    .contact-detail-text strong { display: block; font-size: .85rem; color: var(--gray); font-weight: 600; }
-    .contact-detail-text a, .contact-detail-text span { font-weight: 700; font-size: .98rem; color: var(--dark); }
-    .contact-detail-text a:hover { color: var(--green); }
-    .contact-form {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 36px;
-      box-shadow: var(--shadow);
-    }
-    .contact-form h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 24px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { margin-bottom: 16px; }
-    .form-group label { display: block; font-size: .83rem; font-weight: 600; margin-bottom: 6px; color: var(--gray); }
-    .form-group input, .form-group select, .form-group textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border: 2px solid #dde2df;
-      border-radius: var(--radius);
-      font-size: .93rem;
-      font-family: inherit;
-      transition: border-color var(--trans);
-      color: var(--dark);
-      background: var(--white);
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      outline: none;
-      border-color: var(--green2);
-    }
-    .form-group textarea { resize: vertical; min-height: 100px; }
-    .form-submit { width: 100%; margin-top: 8px; padding: 15px; font-size: 1rem; }
-    @media (max-width: 768px) {
-      .contact-inner { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-    }
-
-    /* ─── Footer ────────────────────────────────────────── */
-    footer {
-      background: var(--dark);
-      color: rgba(255,255,255,.75);
-      padding: 56px 0 28px;
-    }
-    .footer-inner {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-    .footer-brand img { height: 48px; width: auto; margin-bottom: 16px; filter: brightness(0) invert(1); }
-    .footer-brand p { font-size: .88rem; max-width: 260px; line-height: 1.7; }
-    .footer-col h4 { color: var(--white); font-size: .88rem; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: .08em; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-col ul a { font-size: .88rem; transition: color var(--trans); }
-    .footer-col ul a:hover { color: var(--white); }
-    .footer-social { display: flex; gap: 12px; margin-top: 20px; }
-    .footer-social a {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .9rem;
-      transition: background var(--trans);
-    }
-    .footer-social a:hover { background: var(--green2); color: var(--white); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.1);
-      padding-top: 24px;
-      text-align: center;
-      font-size: .82rem;
-    }
-    @media (max-width: 860px) {
-      .footer-inner { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 520px) {
-      .footer-inner { grid-template-columns: 1fr; }
-    }
+    .home-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.1; margin-bottom: 18px; }
+    .home-hero h1 em { color: #8be5b0; font-style: normal; }
+    .home-hero .sub { font-size: 1.08rem; opacity: .88; margin-bottom: 30px; max-width: 480px; }
+    .hero-trust { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 36px; }
+    .hero-trust span { display: flex; align-items: center; gap: 6px; font-size: .84rem; opacity: .88; }
+    .hero-trust span::before { content:'✓'; color:#8be5b0; font-weight:800; }
+    .hero-photo img { border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,.28); width: 100%; max-height: 420px; object-fit: cover; }
+    @media(max-width:768px){ .home-hero-inner { grid-template-columns:1fr; } .hero-photo { display:none; } }
+    /* service section icons */
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
   </style>
 </head>
 <body>
 
-  <!-- ── Top Bar ──────────────────────────────────────── -->
   <div class="topbar">
-    <span>Award-Winning Calgary Waste Management &nbsp;·&nbsp; </span>
-    <a href="tel:4034611677">📞 403-461-1677</a>
-    &nbsp;·&nbsp;
+    Award-winning Calgary Waste Management &nbsp;&middot;&nbsp;
+    <a href="tel:4034611677">&#128222; 403-461-1677</a>
+    &nbsp;&middot;&nbsp;
     <a href="mailto:info@avalanchewm.com">info@avalanchewm.com</a>
   </div>
 
-  <!-- ── Navigation ───────────────────────────────────── -->
-  <nav>
+  <nav class="site-nav">
     <div class="nav-inner">
-      <a class="nav-logo" href="#">
-        <img src="assets/logo.png" alt="Avalanche Waste Management" />
-      </a>
+      <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="Avalanche Waste Management" /></a>
       <input type="checkbox" id="nav-toggle" />
-      <label class="hamburger" for="nav-toggle">
-        <span></span><span></span><span></span>
-      </label>
-      <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Bin Pricing</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <label class="hamburger" for="nav-toggle"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#">Services <span class="caret">&#9660;</span></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="commercial-services.html">Commercial Services</a>
+            <a class="dropdown-item" href="residential-services.html">Residential Services</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="rentals.html">Bin Rentals <span class="caret">&#9660;</span></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="rentals.html#yard40">40-Yard Bin</a>
+            <a class="dropdown-item" href="rentals.html#yard30">30-Yard Bin</a>
+            <a class="dropdown-item" href="rentals.html#yard20">20-Yard Bin</a>
+            <a class="dropdown-item" href="rentals.html#yard12">12-Yard Bin</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="portable-toilets.html">Portable Toilets</a></li>
+        <li class="nav-item"><a class="nav-link" href="temporary-fencing.html">Temporary Fencing</a></li>
+        <li class="nav-item"><a class="nav-link" href="contractor.html">Contractors</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
-      <div class="nav-cta">
+      <div class="nav-right">
         <a class="nav-phone" href="tel:4034611677">403-461-1677</a>
-        <a class="btn btn-primary" href="#contact">Get a Quote</a>
+        <a class="btn btn-primary btn-sm" href="booking.html">Book Now</a>
       </div>
     </div>
   </nav>
 
   <!-- ── Hero ─────────────────────────────────────────── -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-badge">
-          <span>★</span> 2020 Consumer Choice Award Winner
+  <section class="home-hero">
+    <div class="container">
+      <div class="home-hero-inner">
+        <div>
+          <div class="hero-badge">&#9733; 2020 Consumer Choice Award Winner</div>
+          <h1>Calgary&rsquo;s <em>Trusted</em> Waste Management Solution</h1>
+          <p class="sub">Bin rentals, portable toilets, and temporary fencing &mdash; delivered on time, with no hidden fees, no fuel surcharges, and no surprises.</p>
+          <div class="btn-group">
+            <a class="btn btn-white" href="rentals.html">View Pricing</a>
+            <a class="btn btn-ghost" href="booking.html">Book Now</a>
+          </div>
+          <div class="hero-trust">
+            <span>No hidden fees</span>
+            <span>24-hr delivery available</span>
+            <span>Recycling focused</span>
+            <span>Locally manufactured bins</span>
+          </div>
         </div>
-        <h1>Calgary's <span>Trusted</span> Waste Management Solution</h1>
-        <p>Bin rentals, portable toilets, and temporary fencing — delivered on time, with no hidden fees, no fuel surcharges, and no surprises.</p>
-        <div class="hero-btns">
-          <a class="btn btn-white" href="#pricing">View Pricing</a>
-          <a class="btn btn-secondary" style="border-color:rgba(255,255,255,.6);color:#fff;" href="https://avalanchewm.com/booking/" target="_blank" rel="noopener">Book Now</a>
+        <div class="hero-photo">
+          <img src="assets/bin-spotty.jpg" alt="Avalanche Waste Management bin on site" loading="eager" />
         </div>
-        <div class="hero-trust">
-          <div class="hero-trust-item">No hidden fees</div>
-          <div class="hero-trust-item">24-hr delivery available</div>
-          <div class="hero-trust-item">Recycling focused</div>
-          <div class="hero-trust-item">Locally manufactured bins</div>
-        </div>
-      </div>
-      <div class="hero-img-wrap">
-        <img src="assets/bin-spotty.jpg" alt="Avalanche Waste Management bin on site" loading="eager" />
       </div>
     </div>
   </section>
 
-  <!-- ── Stats Bar ─────────────────────────────────────── -->
-  <div class="stats-bar">
+  <!-- ── Stats ─────────────────────────────────────────── -->
+  <div class="stats-strip">
     <div class="container">
       <div class="stats-grid">
-        <div>
-          <div class="stat-num">4</div>
-          <div class="stat-label">Bin sizes available</div>
-        </div>
-        <div>
-          <div class="stat-num">24h</div>
-          <div class="stat-label">Delivery capability</div>
-        </div>
-        <div>
-          <div class="stat-num">3+</div>
-          <div class="stat-label">Award recognitions</div>
-        </div>
-        <div>
-          <div class="stat-num">$0</div>
-          <div class="stat-label">Hidden fees charged</div>
-        </div>
+        <div><div class="stat-num">4</div><div class="stat-label">Bin sizes available</div></div>
+        <div><div class="stat-num">24h</div><div class="stat-label">Delivery capability</div></div>
+        <div><div class="stat-num">3+</div><div class="stat-label">Industry awards</div></div>
+        <div><div class="stat-num">$0</div><div class="stat-label">Hidden fees</div></div>
       </div>
     </div>
   </div>
 
   <!-- ── Services ─────────────────────────────────────── -->
-  <section id="services" class="services">
+  <section class="section">
     <div class="container">
-      <div class="services-header">
-        <div class="section-label">What We Do</div>
-        <h2 class="section-title">Complete Waste Management, One Provider</h2>
-        <p class="section-desc">From roll-off bin rentals to portable toilets and temporary fencing — Avalanche WM handles every jobsite and residential project need in Calgary and surrounding area.</p>
+      <div class="text-center mb-48">
+        <span class="label">What We Do</span>
+        <h2 class="h2">Complete Waste Management, One Provider</h2>
+        <p class="lead mx-auto">From roll-off bin rentals to portable toilets and temporary fencing &mdash; Avalanche WM handles every jobsite and residential project need in Calgary and surrounding area.</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <img src="assets/service-bins.jpg" alt="Roll-off bin rentals Calgary" loading="lazy" />
-          <div class="service-card-body">
+      <div class="cards-grid">
+        <div class="card">
+          <img class="card-img" src="assets/service-bins.jpg" alt="Roll-off bin rentals Calgary" loading="lazy" />
+          <div class="card-body">
             <h3>Roll-Off Bin Rentals</h3>
             <p>12, 20, 30, and 40-yard bins for residential renovations, roofing, construction, and high-volume commercial work. Locally manufactured in Southern Alberta.</p>
-            <a class="btn btn-primary" href="#pricing">See Pricing</a>
+            <a class="btn btn-primary btn-sm" href="rentals.html">See Pricing</a>
           </div>
         </div>
-        <div class="service-card">
-          <img src="assets/service-toilets.jpg" alt="Portable toilet rentals Calgary" loading="lazy" />
-          <div class="service-card-body">
+        <div class="card">
+          <img class="card-img" src="assets/service-toilets.jpg" alt="Portable toilet rentals Calgary" loading="lazy" />
+          <div class="card-body">
             <h3>Portable Toilets</h3>
-            <p>Calgary-area porta-potty rentals for construction sites, special events, festivals, and stampede breakfasts. Weekly cleaning, 24/7 emergency service included.</p>
-            <a class="btn btn-primary" href="#contact">Get a Quote</a>
+            <p>Calgary-area porta-potty rentals for construction sites, special events, festivals, and stampede breakfasts. Weekly cleaning and 24/7 emergency service included.</p>
+            <a class="btn btn-primary btn-sm" href="portable-toilets.html">Learn More</a>
           </div>
         </div>
-        <div class="service-card">
-          <img src="assets/service-fence.jpg" alt="Temporary fencing Calgary" loading="lazy" />
-          <div class="service-card-body">
+        <div class="card">
+          <img class="card-img" src="assets/service-fence.jpg" alt="Temporary fencing Calgary" loading="lazy" />
+          <div class="card-body">
             <h3>Temporary Fencing</h3>
-            <p>Reliable temporary fence rentals to secure any perimeter — from construction sites to events — without adding permanent structures.</p>
-            <a class="btn btn-primary" href="#contact">Get a Quote</a>
+            <p>Reliable temporary fence rentals to secure any perimeter &mdash; from construction sites to public events &mdash; without adding permanent structures.</p>
+            <a class="btn btn-primary btn-sm" href="temporary-fencing.html">Learn More</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Why Choose Us ─────────────────────────────────── -->
-  <section id="why" class="why">
+  <!-- ── Why Us ─────────────────────────────────────────── -->
+  <section class="section bg-light">
     <div class="container">
-      <div class="why-inner">
-        <div class="why-img">
-          <img src="assets/bin-commercial.png" alt="Avalanche WM commercial bin" loading="lazy" />
+      <div class="split">
+        <div class="hide-mobile">
+          <img src="assets/bin-commercial.png" alt="Avalanche WM commercial bin" style="max-height:420px;" loading="lazy" />
         </div>
         <div>
-          <div class="section-label">Why Choose Avalanche</div>
-          <h2 class="section-title">Honest. Fair. Always On Time.</h2>
-          <p class="section-desc" style="color:var(--gray)">Our reputation matters. We built Avalanche Waste Management on four unbreakable commitments — and we stand behind every job we do.</p>
-          <div class="why-features">
-            <div class="why-feature">
-              <div class="why-feature-icon">
-                <img src="assets/icon-honesty.png" alt="" />
-              </div>
-              <div class="why-feature-text">
+          <span class="label">Why Choose Avalanche</span>
+          <h2 class="h2">Honest. Fair. Always On Time.</h2>
+          <p class="lead">Our reputation matters. We built Avalanche Waste Management on four unbreakable commitments.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon"><img src="assets/icon-honesty.png" alt="" /></div>
+              <div class="feature-text">
                 <h4>Honesty &amp; Integrity</h4>
-                <p>Our junk removal reputation is important to us. We always strive to improve it, and we'll never cut corners to save a dollar.</p>
+                <p>Our reputation is everything. We always conduct business with the utmost honesty and integrity when dealing with our customers.</p>
               </div>
             </div>
-            <div class="why-feature">
-              <div class="why-feature-icon">
-                <img src="assets/icon-fair-pricing.png" alt="" />
-              </div>
-              <div class="why-feature-text">
-                <h4>Fair Pricing — No Surprises</h4>
-                <p>No fuel surcharges, environmental fees, or cost recovery charges. When we quote you a price, that is the price you pay.</p>
+            <div class="feature-item">
+              <div class="feature-icon"><img src="assets/icon-fair-pricing.png" alt="" /></div>
+              <div class="feature-text">
+                <h4>Fair Pricing &mdash; No Surprises</h4>
+                <p>No fuel surcharges, no environmental fees, no cost recovery charges. When we quote you a price, that is the price you pay.</p>
               </div>
             </div>
-            <div class="why-feature">
-              <div class="why-feature-icon">
-                <img src="assets/icon-quality.png" alt="" />
-              </div>
-              <div class="why-feature-text">
-                <h4>Quality Service</h4>
-                <p>Best-in-class customer service with flexible evening and weekend availability. We commit to fulfilling orders within 24 hours.</p>
+            <div class="feature-item">
+              <div class="feature-icon"><img src="assets/icon-quality.png" alt="" /></div>
+              <div class="feature-text">
+                <h4>Quality Service, Always</h4>
+                <p>Best-in-class customer service with evening and weekend availability. We commit to fulfilling orders within 24 hours.</p>
               </div>
             </div>
-            <div class="why-feature">
-              <div class="why-feature-icon" style="background:var(--green2);">
-                <span style="color:#fff;font-size:1.2rem;">♻</span>
-              </div>
-              <div class="why-feature-text">
+            <div class="feature-item">
+              <div class="feature-icon" style="background:var(--green2);"><span class="emoji">&#9851;</span></div>
+              <div class="feature-text">
                 <h4>Recycling &amp; Local Focus</h4>
-                <p>A large majority of the waste we haul is recycled and repurposed. Our bins are manufactured right here in Southern Alberta.</p>
+                <p>A large majority of the waste we haul is recycled and repurposed, diverting materials from landfills. Our bins are manufactured right here in Southern Alberta.</p>
               </div>
             </div>
+          </div>
+          <div class="btn-group mt-32">
+            <a class="btn btn-primary" href="about.html">Our Story</a>
+            <a class="btn btn-outline" href="rentals.html">View Pricing</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Pricing ───────────────────────────────────────── -->
-  <section id="pricing" class="pricing">
+  <!-- ── Pricing preview ───────────────────────────────── -->
+  <section class="section">
     <div class="container">
-      <div class="pricing-header">
-        <div class="section-label">Bin Rental Rates</div>
-        <h2 class="section-title">Transparent Pricing — No Hidden Costs</h2>
-        <p class="section-desc">All prices include delivery and pick-up. Prices are listed as starting rates; disposal fees (TBD by weight/load) apply at the landfill. <strong>$8/day</strong> after the initial 7-day rental period.</p>
+      <div class="text-center mb-48">
+        <span class="label">Bin Rental Rates</span>
+        <h2 class="h2">Transparent Pricing &mdash; No Hidden Costs</h2>
+        <p class="lead mx-auto">All prices include delivery and pick-up. $8/day after the 7-day rental period.</p>
       </div>
       <div class="pricing-grid">
-
-        <!-- 12 Yard -->
-        <div class="pricing-card">
-          <img src="assets/bin-residential.png" alt="12-yard residential bin" loading="lazy" />
+        <div class="pricing-card" id="home-y12">
+          <img src="assets/bin-residential.png" alt="12-yard bin" loading="lazy" />
           <h3>12-Yard Bin</h3>
           <div class="price">$210 <small>+ disposal</small></div>
-          <ul class="pricing-specs">
-            <li>Dimensions: 12' × 6' × 4.5'</li>
-            <li>Multi-purpose residential solution</li>
-            <li>Perfect for small cleanups &amp; renovations</li>
+          <ul class="spec-list">
+            <li>12&rsquo; &times; 6&rsquo; &times; 4.5&rsquo; dimensions</li>
+            <li>Multi-purpose residential</li>
             <li>Includes delivery &amp; pick-up</li>
-            <li>$8/day after 7 days</li>
           </ul>
-          <a class="btn btn-primary" href="https://avalanchewm.com/booking/" target="_blank" rel="noopener">Book Now</a>
+          <a class="btn btn-primary btn-block" href="booking.html">Book Now</a>
         </div>
-
-        <!-- 20 Yard -->
-        <div class="pricing-card featured">
-          <div class="pricing-badge">Most Popular</div>
-          <img src="assets/bin-residential.png" alt="20-yard residential bin" loading="lazy" />
+        <div class="pricing-card featured" id="home-y20">
+          <div class="badge">Most Popular</div>
+          <img src="assets/bin-residential.png" alt="20-yard bin" loading="lazy" />
           <h3>20-Yard Bin</h3>
           <div class="price">$245 <small>+ disposal</small></div>
-          <ul class="pricing-specs">
-            <li>Dimensions: 16' × 7' × 5'</li>
-            <li>Fits standard residential driveway</li>
-            <li>Ideal for larger renos &amp; cleanouts</li>
+          <ul class="spec-list">
+            <li>16&rsquo; &times; 7&rsquo; &times; 5&rsquo; dimensions</li>
+            <li>Fits standard driveway</li>
             <li>Includes delivery &amp; pick-up</li>
-            <li>$8/day after 7 days</li>
           </ul>
-          <a class="btn btn-primary" href="https://avalanchewm.com/booking/" target="_blank" rel="noopener">Book Now</a>
+          <a class="btn btn-primary btn-block" href="booking.html">Book Now</a>
         </div>
-
-        <!-- 30 Yard -->
-        <div class="pricing-card">
-          <img src="assets/bin-commercial.png" alt="30-yard commercial bin" loading="lazy" />
+        <div class="pricing-card" id="home-y30">
+          <img src="assets/bin-commercial.png" alt="30-yard bin" loading="lazy" />
           <h3>30-Yard Bin</h3>
           <div class="price">$275 <small>+ disposal</small></div>
-          <ul class="pricing-specs">
-            <li>Dimensions: 16' × 8' × 6'</li>
+          <ul class="spec-list">
+            <li>16&rsquo; &times; 8&rsquo; &times; 6&rsquo; dimensions</li>
             <li>Contractors &amp; builders</li>
-            <li>Great for large roofing or demo jobs</li>
             <li>Includes delivery &amp; pick-up</li>
-            <li>$8/day after 7 days</li>
           </ul>
-          <a class="btn btn-primary" href="https://avalanchewm.com/booking/" target="_blank" rel="noopener">Book Now</a>
+          <a class="btn btn-primary btn-block" href="booking.html">Book Now</a>
         </div>
-
-        <!-- 40 Yard -->
-        <div class="pricing-card">
-          <img src="assets/bin-commercial.png" alt="40-yard commercial bin" loading="lazy" />
+        <div class="pricing-card" id="home-y40">
+          <img src="assets/bin-commercial.png" alt="40-yard bin" loading="lazy" />
           <h3>40-Yard Bin</h3>
           <div class="price">$325 <small>+ disposal</small></div>
-          <ul class="pricing-specs">
-            <li>Dimensions: 21' × 7.5' × 7'</li>
-            <li>High-capacity for shake tear-offs</li>
-            <li>Reserved for commercial &amp; contractors</li>
+          <ul class="spec-list">
+            <li>21&rsquo; &times; 7.5&rsquo; &times; 7&rsquo; dimensions</li>
+            <li>High-capacity commercial</li>
             <li>Includes delivery &amp; pick-up</li>
-            <li>$8/day after 7 days</li>
           </ul>
-          <a class="btn btn-primary" href="https://avalanchewm.com/booking/" target="_blank" rel="noopener">Book Now</a>
+          <a class="btn btn-primary btn-block" href="booking.html">Book Now</a>
         </div>
-
       </div>
-      <p class="pricing-note">
-        All bins include delivery and pick-up. Disposal fees are determined at the landfill by weight/load type.<br />
-        Commercial clients: contact us to discuss permanent on-site bin solutions and custom scheduling.
-      </p>
+      <div class="notice mt-24">All bins include delivery and pick-up. Disposal fees determined at landfill by weight/material. <a href="rentals.html" style="color:var(--green);font-weight:700;">View full pricing details &rarr;</a></div>
     </div>
   </section>
 
-  <!-- ── Awards ────────────────────────────────────────── -->
-  <section class="awards">
+  <!-- ── Awards ─────────────────────────────────────────── -->
+  <section class="awards-bar">
     <div class="container">
       <h2>Recognized for Excellence</h2>
-      <p>We're proud to be Calgary's award-winning waste management company.</p>
-      <div class="awards-grid">
-        <div class="award-item">
-          <img src="assets/award-consumer-choice.png" alt="2020 Consumer Choice Award — Waste Management" />
-        </div>
-        <div class="award-item">
-          <img src="assets/award-top-choice.png" alt="2018-2019 Top Choice Award — Waste Management Solutions" />
-        </div>
-        <div class="award-item award-bbb">
-          <img src="assets/bbb-logo.png" alt="BBB Accredited Business" />
-        </div>
+      <p>Calgary&rsquo;s award-winning waste management company.</p>
+      <div class="awards-logos">
+        <div><img src="assets/award-consumer-choice.png" alt="2020 Consumer Choice Award" /></div>
+        <div><img src="assets/award-top-choice.png" alt="2018-2019 Top Choice Award" /></div>
+        <div class="award-bbb"><img src="assets/bbb-logo.png" alt="BBB Accredited Business" /></div>
       </div>
     </div>
   </section>
 
   <!-- ── Testimonials ──────────────────────────────────── -->
-  <section class="testimonials">
+  <section class="section bg-light">
     <div class="container">
-      <div class="testimonials-header">
-        <div class="section-label">Testimonials</div>
-        <h2 class="section-title">What Our Customers Say</h2>
+      <div class="text-center mb-48">
+        <span class="label">Testimonials</span>
+        <h2 class="h2">Trusted by Calgary Contractors &amp; Homeowners</h2>
       </div>
       <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Top notch drivers and pickup of the bins is done in a timely fashion. I would recommend Avalanche to anyone looking for a reliable bin rental company."</p>
-          <div class="testimonial-author">Chris Levesque</div>
-          <div class="testimonial-company">Levesque Roofing Inc.</div>
+        <div class="testimonial-block">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">&ldquo;Avalanche Waste Management is an exceptional garbage removal service. They are on time and honest for a great value. The employees are top notch drivers and pickup of the bins is done in a timely fashion. I would recommend them for all garbage needs.&rdquo;</p>
+          <div class="testimonial-author"><strong>Chris Levesque</strong><span>Owner, Levesque Roofing Inc.</span></div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"When we tell you a price, that is the price you pay — and they mean it. No fuel surcharge, no environmental fees, no surprises at pickup. Refreshing honesty in this industry."</p>
-          <div class="testimonial-author">Calgary Homeowner</div>
-          <div class="testimonial-company">Residential Renovation Client</div>
+        <div class="testimonial-block">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">&ldquo;No fuel surcharge, no environmental fees, no surprises at pickup. When they quote a price, that is the price you pay. Refreshingly honest in this industry &mdash; I&rsquo;ll never use anyone else for bin rentals.&rdquo;</p>
+          <div class="testimonial-author"><strong>Calgary Homeowner</strong><span>Residential Renovation Client</span></div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Avalanche has been our go-to for bin rentals on every job site. Prompt delivery, fair pricing, and they always work around our schedule. Highly recommended for contractors."</p>
-          <div class="testimonial-author">Calgary Contractor</div>
-          <div class="testimonial-company">Commercial Construction Client</div>
+        <div class="testimonial-block">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">&ldquo;Avalanche has been our go-to for bin rentals on every job site. Prompt delivery, fair pricing, and they always work around our schedule. Highly recommended for contractors and builders.&rdquo;</p>
+          <div class="testimonial-author"><strong>Calgary Contractor</strong><span>Commercial Construction Client</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── About ─────────────────────────────────────────── -->
-  <section class="about">
+  <!-- ── About teaser ──────────────────────────────────── -->
+  <section class="section">
     <div class="container">
-      <div class="about-inner">
-        <div class="about-photo">
-          <img src="assets/kent.jpg" alt="Kenton Van Doesburg — President, Avalanche Waste Management" loading="lazy" />
+      <div class="split split-2-3">
+        <div class="hide-mobile">
+          <img src="assets/kent.jpg" alt="Kenton Van Doesburg — President, Avalanche Waste Management" style="max-height:380px;" loading="lazy" />
         </div>
-        <div class="about-content">
-          <span class="section-label">About Avalanche</span>
-          <h2 class="section-title">Built on Honesty. Driven by Community.</h2>
-          <p>Avalanche Waste Management has established itself as an innovative leader in Calgary's bin rental, waste, and recycling industry. We provide Calgary and surrounding areas with residential and commercial bin rentals, portable toilets, and temporary fencing.</p>
-          <p>Our bins are manufactured right here in Southern Alberta — supporting local businesses while delivering best-in-class equipment. A large majority of the junk and waste we haul is recycled and repurposed, diverting materials from landfills as a core part of our business model.</p>
-          <p>We specialize in making waste management one less problem on your plate. Whether you're a busy site supervisor or a homeowner tackling a renovation, we show up on time, charge a fair price, and take care of the rest.</p>
-          <p><strong>Kenton Van Doesburg</strong> — President &amp; Owner</p>
-          <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
-            <a class="btn btn-primary" href="#contact">Contact Us</a>
-            <a class="btn btn-secondary" href="https://avalanchewm.com/booking/" target="_blank" rel="noopener">Book Online</a>
+        <div>
+          <span class="label">About Avalanche</span>
+          <h2 class="h2">Built on Honesty. Driven by Community.</h2>
+          <p class="lead" style="max-width:100%;">Avalanche Waste Management has established itself as an innovative leader in Calgary&rsquo;s bin rental, waste, and recycling industry. Our bins are manufactured right here in Southern Alberta &mdash; supporting local businesses while delivering best-in-class equipment.</p>
+          <p style="color:var(--gray);margin-top:14px;">A large majority of the junk and waste we haul is recycled and repurposed, diverting materials from landfills as a core part of our business. We show up on time, charge a fair price, and take care of the rest.</p>
+          <p style="margin-top:14px;"><strong>Kenton Van Doesburg</strong> &mdash; President &amp; Owner</p>
+          <div class="btn-group mt-24">
+            <a class="btn btn-primary" href="about.html">Our Full Story</a>
+            <a class="btn btn-outline" href="contact.html">Contact Us</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── CTA Banner ────────────────────────────────────── -->
+  <!-- ── CTA ────────────────────────────────────────────── -->
   <section class="cta-banner">
     <h2>Ready to Get Started?</h2>
-    <p>Call us at <a href="tel:4034611677" style="color:#8be5b0;font-weight:700;">403-461-1677</a> or book your bin online in minutes — no hidden fees, guaranteed.</p>
-    <div class="cta-buttons">
-      <a class="btn btn-white" href="https://avalanchewm.com/booking/" target="_blank" rel="noopener">Book a Bin Online</a>
-      <a class="btn" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);" href="#contact">Send Us a Message</a>
+    <p>Call <a href="tel:4034611677" style="color:#8be5b0;font-weight:700;">403-461-1677</a> or book online &mdash; no hidden fees, guaranteed.</p>
+    <div class="btn-group" style="justify-content:center;">
+      <a class="btn btn-white" href="booking.html">Book a Bin Online</a>
+      <a class="btn btn-ghost" href="contact.html">Send Us a Message</a>
     </div>
   </section>
 
-  <!-- ── Contact ───────────────────────────────────────── -->
-  <section id="contact" class="contact">
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="contact-inner">
-        <div class="contact-info">
-          <div class="section-label">Get In Touch</div>
-          <h2 class="section-title">We're Here to Help</h2>
-          <p>Have a question about bin sizes, scheduling, or portable toilets? Reach out — we'll help you find the right solution for your project and budget.</p>
-          <div class="contact-detail">
-            <div class="contact-icon">📞</div>
-            <div class="contact-detail-text">
-              <strong>Phone</strong>
-              <a href="tel:4034611677">403-461-1677</a>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-icon">✉️</div>
-            <div class="contact-detail-text">
-              <strong>Email</strong>
-              <a href="mailto:info@avalanchewm.com">info@avalanchewm.com</a>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-icon">📍</div>
-            <div class="contact-detail-text">
-              <strong>Service Area</strong>
-              <span>Calgary &amp; Surrounding Area, Alberta</span>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-icon">🕐</div>
-            <div class="contact-detail-text">
-              <strong>Availability</strong>
-              <span>Evening &amp; weekend delivery available</span>
-            </div>
-          </div>
-        </div>
-        <div class="contact-form">
-          <h3>Request a Free Quote</h3>
-          <form action="https://formsubmit.co/info@avalanchewm.com" method="POST">
-            <input type="hidden" name="_subject" value="Quote Request from avalanchewm-redesign site" />
-            <input type="hidden" name="_captcha" value="false" />
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required placeholder="Jane Smith" />
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="403-xxx-xxxx" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required placeholder="you@example.com" />
-            </div>
-            <div class="form-group">
-              <label for="service">Service Needed</label>
-              <select id="service" name="service">
-                <option value="">Select a service…</option>
-                <option>12-Yard Bin Rental</option>
-                <option>20-Yard Bin Rental</option>
-                <option>30-Yard Bin Rental</option>
-                <option>40-Yard Bin Rental</option>
-                <option>Portable Toilet Rental</option>
-                <option>Temporary Fencing</option>
-                <option>Commercial / Ongoing Service</option>
-                <option>Other / Not Sure</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Project Details</label>
-              <textarea id="message" name="message" placeholder="Tell us about your project — location, timeline, materials being disposed…"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary form-submit">Send My Quote Request</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Footer ────────────────────────────────────────── -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
+      <div class="footer-grid">
         <div class="footer-brand">
           <img src="assets/logo.png" alt="Avalanche Waste Management" />
-          <p>Calgary's award-winning bin rental, portable toilet, and temporary fencing provider. Honest pricing, reliable service, always.</p>
+          <p>Calgary&rsquo;s award-winning bin rental, portable toilet, and temporary fencing provider. Honest pricing, reliable service, always.</p>
           <div class="footer-social">
             <a href="https://www.facebook.com/Avalanche-Waste-Management-693811640731460" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-            <a href="https://twitter.com/avalanche_waste" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+            <a href="https://twitter.com/avalanche_waste" target="_blank" rel="noopener" aria-label="Twitter">&#120143;</a>
             <a href="https://instagram.com/avalanche_waste" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
           </div>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="#pricing">Bin Rentals</a></li>
-            <li><a href="#services">Portable Toilets</a></li>
-            <li><a href="#services">Temporary Fencing</a></li>
-            <li><a href="https://avalanchewm.com/commercial-services/" target="_blank" rel="noopener">Commercial</a></li>
-            <li><a href="https://avalanchewm.com/residential-services/" target="_blank" rel="noopener">Residential</a></li>
-            <li><a href="https://avalanchewm.com/contractor/" target="_blank" rel="noopener">Contractors</a></li>
+            <li><a href="rentals.html">Bin Rentals</a></li>
+            <li><a href="portable-toilets.html">Portable Toilets</a></li>
+            <li><a href="temporary-fencing.html">Temporary Fencing</a></li>
+            <li><a href="commercial-services.html">Commercial</a></li>
+            <li><a href="residential-services.html">Residential</a></li>
+            <li><a href="contractor.html">Contractors</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Bin Sizes</h4>
           <ul>
-            <li><a href="#pricing">12-Yard — $210</a></li>
-            <li><a href="#pricing">20-Yard — $245</a></li>
-            <li><a href="#pricing">30-Yard — $275</a></li>
-            <li><a href="#pricing">40-Yard — $325</a></li>
+            <li><a href="rentals.html#yard12">12-Yard &mdash; $210+</a></li>
+            <li><a href="rentals.html#yard20">20-Yard &mdash; $245+</a></li>
+            <li><a href="rentals.html#yard30">30-Yard &mdash; $275+</a></li>
+            <li><a href="rentals.html#yard40">40-Yard &mdash; $325+</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li><a href="tel:4034611677">403-461-1677</a></li>
+            <li><a href="tel:4034611677">(403) 461-1677</a></li>
             <li><a href="mailto:info@avalanchewm.com">info@avalanchewm.com</a></li>
-            <li><a href="https://avalanchewm.com/booking/" target="_blank" rel="noopener">Book Online</a></li>
+            <li><a href="booking.html">Book Online</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
+          <p style="font-size:.82rem;margin-top:14px;opacity:.7;">#1, 2419 &ndash; 52 Ave SE<br/>Calgary, Alberta T2C 4X7</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2024 Avalanche Waste Management Calgary. All rights reserved. Serving Calgary and surrounding area.</p>
+        <p>&copy; 2024 Avalanche Waste Management Calgary. All rights reserved.</p>
+        <p>Serving Calgary &amp; Surrounding Area, Alberta</p>
       </div>
     </div>
   </footer>

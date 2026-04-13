@@ -240,5 +240,22 @@
     </div>
   </footer>
 
+  <!-- ── Mobile nav auto-close ──────────────────────────
+       The CSS-only checkbox hack keeps the menu open after
+       a link tap. This script unchecks the toggle whenever
+       any nav link (including dropdown items) is clicked.
+  ─────────────────────────────────────────────────────── -->
+  <script>
+    (function () {
+      var toggle = document.getElementById('nav-toggle');
+      if (!toggle) return;
+      document.querySelectorAll('.nav-link, .dropdown-item').forEach(function (el) {
+        el.addEventListener('click', function () {
+          toggle.checked = false;
+        });
+      });
+    })();
+  </script>
+
 </body>
 </html>

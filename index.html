@@ -415,5 +415,21 @@
     </div>
   </footer>
 
+  <!-- ── Mobile nav auto-close ──────────────────────────
+       Uncheck the CSS checkbox toggle whenever any nav
+       link or dropdown item is tapped on mobile.
+  ─────────────────────────────────────────────────────── -->
+  <script>
+    (function () {
+      var toggle = document.getElementById('nav-toggle');
+      if (!toggle) return;
+      document.querySelectorAll('.nav-link, .dropdown-item').forEach(function (el) {
+        el.addEventListener('click', function () {
+          toggle.checked = false;
+        });
+      });
+    })();
+  </script>
+
 </body>
 </html>

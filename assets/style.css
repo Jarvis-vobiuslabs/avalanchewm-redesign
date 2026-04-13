@@ -333,14 +333,24 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .awards-bar { background: var(--green); color: var(--white); padding: 52px 0; text-align: center; }
 .awards-bar h2 { font-size: clamp(1.4rem,3.5vw,2rem); font-weight: 800; margin-bottom: 6px; }
 .awards-bar p  { opacity: .8; margin-bottom: 36px; }
-.awards-logos  { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
-.awards-logos img {
-  height: 110px; width: auto; object-fit: contain;
-  filter: brightness(0) invert(1); opacity: .88;
-  transition: opacity var(--trans), transform var(--trans);
+.awards-logos  { display: flex; justify-content: center; align-items: center; gap: 24px; flex-wrap: wrap; }
+/* White cards so coloured badge artwork is legible on the green background */
+.awards-logos > div {
+  background: rgba(255,255,255,.96);
+  border-radius: 12px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 14px rgba(0,0,0,.18);
+  transition: transform var(--trans), box-shadow var(--trans);
 }
-.awards-logos img:hover { opacity: 1; transform: scale(1.04); }
-.award-bbb img { filter: none; opacity: 1; height: 80px; }
+.awards-logos > div:hover { transform: scale(1.04); box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+.awards-logos img {
+  height: 100px; width: auto; object-fit: contain;
+  /* Display award images in their natural colours — no destructive filter */
+}
+.award-bbb img { height: 72px; }
 
 /* ── Testimonial ────────────────────────────────────── */
 .testimonial-block {
